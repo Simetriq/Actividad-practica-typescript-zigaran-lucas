@@ -16,7 +16,7 @@ class Empleado {
     }
 }
 
-class EmpleadoFijo extends Errormpleado {
+class EmpleadoFijo extends Empleado {
     sueldoBase: number
     
     constructor(nombre: string, antiguedad: number, sueldoBase: number) {
