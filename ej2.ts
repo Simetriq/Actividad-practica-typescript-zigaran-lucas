@@ -30,7 +30,7 @@ class CuentaBancaria {
         }
 
         if (monto > this.saldo) {
-            throw new Error("Saldo insuficiente para realizar el retiro");
+            throw new Error("Saldo insuficiente");
         }
         this.saldo -= monto;
         this.historial.push(`Retiro: -${monto}`);
