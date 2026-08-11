@@ -11,8 +11,9 @@ class Producto {
             this.categoria = categoria;
             this.stock = stock;
         }
-    describir(): void {
-        console.log(`Nombre: ${this.nombre}, Precio: ${this.precio}, Categoria: ${this.categoria}, Stock: ${this.stock}`);
+    describir(): string {
+        
+        return `Nombre: ${this.nombre}, Precio: ${this.precio}, Categoria: ${this.categoria}, Stock: ${this.stock}`;
     }
     hayStock(cantidad: number): boolean {
         return this.stock > 0 && cantidad <= this.stock ? true : false
@@ -22,7 +23,7 @@ class Producto {
         const hayUnidades = this.hayStock(cantidad);
         
         if(hayUnidades){
-            this.stock = this.stock - 1
+            this.stock = this.stock - cantidad;
         } else {
             console.log('No hay stock disponible')
         }
