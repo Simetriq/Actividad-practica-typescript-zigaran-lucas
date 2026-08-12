@@ -46,3 +46,12 @@ class CuentaBancaria {
         return this.historial.slice(); 
     }
 }
+
+const cuenta = new CuentaBancaria('Ana', 100);
+console.log('Titular:', cuenta.titular);
+console.log('Saldo inicial:', cuenta.consultarSaldo());
+cuenta.depositar(50);
+console.log('Saldo después de depositar 50:', cuenta.consultarSaldo());
+cuenta.retirar(30);
+console.log('Saldo después de retirar 30:', cuenta.consultarSaldo());
+console.log('Historial:', cuenta.obtenerHistorial());
