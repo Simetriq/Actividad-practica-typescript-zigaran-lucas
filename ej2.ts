@@ -15,7 +15,7 @@ class CuentaBancaria {
     depositar(monto: number): void {
 
         if (monto <= 0) {
-            throw new Error("El monto a depositar debe ser mayor a 0");
+            console.log("El monto a depositar debe ser mayor a 0");
         }
         this.saldo += monto;
 
@@ -26,11 +26,11 @@ class CuentaBancaria {
     retirar(monto: number): void {
 
         if (monto <= 0) {
-            throw new Error("El monto a retirar debe ser mayor a 0");
+            console.log("El monto a retirar debe ser mayor a 0");
         }
 
         if (monto > this.saldo) {
-            throw new Error("Saldo insuficiente");
+            console.log("Saldo insuficiente");
         }
         this.saldo -= monto;
         this.historial.push(`Retiro: -${monto}`);
