@@ -43,3 +43,10 @@ class Persona {
         return `Nombre: ${this.nombre}, Mayor de edad: ${this.esMayorDeEdad}`;
     }
 }
+
+
+const persona = new Persona('12345678A', 'Carlos', 28, 'carlos@example.com');
+console.log(persona.datosPublicos);
+console.log('Edad:', persona.edad);
+console.log('Email:', persona.email);
+console.log('Es mayor de edad:', persona.esMayorDeEdad);
