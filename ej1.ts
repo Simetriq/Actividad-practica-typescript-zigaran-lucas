@@ -33,3 +33,9 @@ class Producto {
         return this.precio - descuento
     }
 };
+
+const p = new Producto("Camiseta", 20, "Ropa", 10);
+console.log(p.describir());
+p.venderUnidades(3);
+console.log("Stock restante:", p.stock);
+console.log("Precio con 10% desc:", p.aplicarDescuento(10));
