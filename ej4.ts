@@ -71,8 +71,11 @@ const empleados: Empleado[] = [
 
 
 for (let emp of empleados) {
-    console.log(emp.calcularSueldo());
+    console.log(emp.describir());
+    console.log('Sueldo:', emp.calcularSueldo());
 }
+
+console.log('Nómina total:', calcularNomina(empleados));
 
 function calcularNomina(empleados: Empleado[]): number {
     let total = 0;
