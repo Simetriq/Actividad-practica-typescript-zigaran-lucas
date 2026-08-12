@@ -28,3 +28,8 @@ class EmpleadoFijo extends Empleado {
     }
 }
 
+
+const emp = new EmpleadoFijo('Luis', 5, 1500);
+console.log(emp.describir());
+console.log('Sueldo:', emp.calcularSueldo());
+
