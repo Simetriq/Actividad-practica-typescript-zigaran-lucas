@@ -44,14 +44,6 @@ class ControlRemoto {
     private canalActual: number = 2;
     private encendido: boolean = false;
 
-    constructor(volumenActual: number, canalActual: number, encendido: boolean){
-
-        volumenActual = this.volumenActual
-        canalActual = this.canalActual
-        encendido = this.encendido
-    
-    }
-
     //Metodo ----
     encender(): boolean {
         return this.encendido = true;
@@ -66,7 +58,7 @@ class ControlRemoto {
     subirVolumen(): number | void {
 
         if(this.encendido && this.volumenActual < 20){
-            return this.volumenActual =+ 1 
+            return this.volumenActual += 1 
 
         }else{
             return console.log("El volumen esta al Maximo");
@@ -77,11 +69,25 @@ class ControlRemoto {
     //Metodo ---
     bajarVolumen(): number | void {
         if(this.encendido && this.volumenActual > 1){
-            return this.volumenActual =- 1
+            return this.volumenActual -= 1
 
         }else{
             return console.log('El volumen esta al minimo');
         }
     }
 
+    // Metodo ---
+    cambiarCanal(nuevoCanal: number): number | void {
+        if(this.encendido && nuevoCanal >= 1 && nuevoCanal <= 100){
+            return this.canalActual = nuevoCanal;
+        }
+    }
+
+    // Metodo
+    obtenerEstado(): string {
+    if (!this.encendido) {
+        return "Apagado";
+    }
+    return `Encendido — Volumen: ${this.volumenActual}, Canal: ${this.canalActual}`;
+}
 }
