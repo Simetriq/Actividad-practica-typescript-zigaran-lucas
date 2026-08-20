@@ -84,10 +84,14 @@ class ControlRemoto {
     }
 
     // Metodo
-    obtenerEstado(): string {
+    obtenerEstado(): string | void {
     if (!this.encendido) {
         return "Apagado";
     }
     return `Encendido — Volumen: ${this.volumenActual}, Canal: ${this.canalActual}`;
 }
 }
+
+const controlRemoto = new ControlRemoto();
+console.log(controlRemoto.encender());
+console.log(controlRemoto.obtenerEstado());
